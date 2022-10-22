@@ -1,0 +1,35 @@
+BASIC SIZE AND TIME REQUIREMENTS OF BOLTZMANN PARTICLE SIMULATIONS FOR 
+N = 10^k, number of total particles. If $\norm{F^a}_{L^1(\Omega \times \R^3)} = M_0^a$
+for all particle species $a$, then let $N^a(E)(t) = \int_E F^a(t,x,v) dxdv$ denote the
+number density for the species $a$. If $N^a(\Omega \times \R^d)(0) = M_0^a
+	\begin{align}\label{number_densities}
+		Nd & = O(L)*\left( 10^23/m^3 \right) \text{ (the bulk sample)} \\
+		Nm & = mixing_ratio_m*N_d 	\text{ (vapor H20) }  \\
+		Nl & = mixing_ratio_m*N_d		\text{ (liquid H20) } \\
+		Ni & = mixing_ration_i*N_d	\text{ (ice H20) } \\
+		Ng & = mixing_ratio_g*N_d	# graupel	\text{ (graupel) } \\
+		Nccn & = mixing_ratio_ccn*N_d 	\text{ (cloud condensate nuclei (CCN) } \\
+		NC02 & = mixing_ratio_x*N_d		\text{ (particle species $x$) } \\
+		& \ldots
+	\end{align}
+where $L = 10^6 m$ (scale = meso-? vs synaptic?) is the length of the domain. In the 
+sense that there is one "bulk" constitutent of the atmosphere, namely, the "dry"
+Nitrogen-Oxygen-Argon-etc mix represented by the density $N_d$ above, there are 
+natural variables (we now switch to considering the normalized densities of 
+arbitary type $\rho^a$)
+	\begin{align} 
+		\D_t \left( \langle |v|^2 F^a  \rangle_v \right) & = \D_t \left( |J|^2 \rho + 2\rho e \right) \\
+		\text{where } J(t,x) = \
+	\end{align}
+assuming that each particle species acts to its own equation, decoupled from the others. If non-local
+and local forces, represented by the collisional integral and $-\nabla_x \Phi^a \cdot \nabla_v$ terms,
+respectively \emph{between} particle species are allowed, the forces between particles must be 
+accounted for consistently. The best way seems to be to write down the corresponding $N$-particle
+Hamilton which governs the dynamics; i.e., once we solve the coupled trajectories (emanating from an
+admittedly enormous amount of grid points...) we have an integral formula for 
+Q: How are these mixing ratio data points captured?  
+
+PHYSICAL ASSUMPTION IN BINARY-GAS MIXTURE:
+The \emph{chemical potentials} are equal, $c_a = c_b$ so that the profiles are
+symmetric under exchange of particles $b \mapsto a$. To read: symmetry-breaking
+and bifurcation. See SteinShakarchiI.4 in fourier context. 
